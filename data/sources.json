@@ -1,0 +1,85 @@
+{
+  "accessed": "7 Nov 2026",
+  "sources": {
+    "nrf2023": {
+      "title": "NRF National Retail Security Survey 2023 (press release)",
+      "org": "National Retail Federation (USA)",
+      "url": "https://nrf.com/media-center/press-releases/shrink-accounted-over-112-billion-industry-losses-2022-according-nrf"
+    },
+    "nrf2024": {
+      "title": "The Impact of Retail Theft & Violence 2024 (press release, 17 Dec 2024)",
+      "org": "NRF + Loss Prevention Research Council",
+      "url": "https://nrf.com/media-center/press-releases/shoplifting-incidents-jump-93-since-pre-covid-according-to-new-industry-study"
+    },
+    "grtbIndia2009": {
+      "title": "India tops retail shrinkage rate (Global Retail Theft Barometer, Jul 2008 - Jun 2009)",
+      "org": "IFSEC Global / Centre for Retail Research",
+      "url": "https://www.ifsecglobal.com/india-region/india-tops-retail-shrinkage-rate/"
+    },
+    "grtbIndia2010": {
+      "title": "Indian retail lost Rs 9,295 cr to shoplifting, theft (GRTB, year to Jun 2010)",
+      "org": "Business Standard, 24 Nov 2010",
+      "url": "https://www.business-standard.com/article/companies/indian-retail-lost-rs-9-295-to-shoplifting-theft-110112400049_1.html"
+    },
+    "grtbGlobal2007": {
+      "title": "Shrink costs the world's retailers $98.6 billion (GRTB 2007)",
+      "org": "Security Magazine, 30 Nov 2007",
+      "url": "https://securitymagazine.com/articles/78786-shrink-costs-the-worlds-retailers-98-6-billion-2"
+    },
+    "appriss2024": {
+      "title": "Losses from return fraud and abuse exceed $100 billion (Appriss Retail / Deloitte 2024)",
+      "org": "Chain Store Age",
+      "url": "https://chainstoreage.com/losses-return-fraud-and-abuse-exceed-100-billion"
+    },
+    "aishe": {
+      "title": "AISHE 2021-22: 4.33 crore enrolments in higher education",
+      "org": "Free Press Journal, 26 Jan 2024 (Ministry of Education data)",
+      "url": "https://www.freepressjournal.in/education/aishe-report-survey-records-433-crore-enrolments-in-higher-education-in-india"
+    },
+    "nirf": {
+      "title": "IIT Madras NIRF 2025 data (student strength)",
+      "org": "National Institutional Ranking Framework",
+      "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0456.pdf"
+    },
+    "dost": {
+      "title": "Shops on campus",
+      "org": "Dean of Students, IIT Madras",
+      "url": "https://dost.iitm.ac.in/shops"
+    },
+    "ccw": {
+      "title": "Eateries and shops",
+      "org": "Office of Hostel Management (CCW), IIT Madras",
+      "url": "https://ccw.iitm.ac.in/pages/eateries-and-shops"
+    },
+    "upi": {
+      "title": "UPI ends 2025 with record 21.63 bn transactions worth Rs 27.97 trn",
+      "org": "Business Standard, 1 Jan 2026 (NPCI data)",
+      "url": "https://www.business-standard.com/amp/industry/news/upi-ends-2025-strong-note-record-transactions-december-126010100687_1.html"
+    },
+    "veesion": {
+      "title": "Veesion raises EUR 38m for AI shoplifting detection",
+      "org": "The Next Web, 21 May 2025",
+      "url": "https://thenextweb.com/news/us-shoplifting-epidemic-veesion-french-ai-cameras-startup-funding"
+    },
+    "patVerint": {
+      "title": "US9137500B1 - Point of sale integration with video analytics for fraud detection",
+      "org": "Google Patents (Verint Systems)",
+      "url": "https://patents.google.com/patent/US9137500"
+    },
+    "patJfm": {
+      "title": "US11928942B2 - Systems and methods for theft prevention and detection",
+      "org": "Google Patents (JFM International)",
+      "url": "https://patents.google.com/patent/US11928942"
+    },
+    "patEverseen": {
+      "title": "US12406503B2 - Detection of behaviours in a retail environment",
+      "org": "Google Patents (Everseen)",
+      "url": "https://patents.google.com/patent/US12406503"
+    },
+    "cocoSsd": {
+      "title": "COCO-SSD object detection model for TensorFlow.js",
+      "org": "TensorFlow.js models (open source, Apache 2.0)",
+      "url": "https://www.npmjs.com/package/@tensorflow-models/coco-ssd"
+    }
+  }
+}
