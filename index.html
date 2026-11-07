@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LeakGuard – Campus Retail Leak Monitor</title>
+  <meta name="description" content="LeakGuard: one low-cost system for campus shops to catch revenue leakage from shoplifting, stock errors and refund fraud.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f5e57'/%3E%3Cpath d='M16 6c-4 5-7 8.5-7 12a7 7 0 0 0 14 0c0-3.5-3-7-7-12z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"></span>
+      <div>
+        <strong>LeakGuard</strong>
+        <small>Campus retail leak monitor · prototype</small>
+      </div>
+    </div>
+    <div class="shopinfo">
+      <label>Shop <select id="shopSel"><option>Campus General &amp; Stationery Store (demo)</option></select></label>
+      <label>Logged in as <select id="staffSel"></select></label>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <a href="#overview">Overview</a>
+    <a href="#billing">Billing</a>
+    <a href="#inventory">Inventory</a>
+    <a href="#returns">Returns</a>
+    <a href="#camera">Camera watch</a>
+    <a href="#estimator">Loss estimator</a>
+    <a href="#campus">Campus data</a>
+    <a href="#sources">Sources</a>
+  </nav>
+
+  <main id="view"></main>
+
+  <footer class="foot">
+    <p>LeakGuard prototype for the Innovation &amp; Entrepreneurship for Engineers Demo Day, IIT Madras, 15 Nov 2026 (Batch B, Group 41).
+    Shop transactions are simulated demo data stored only in your browser. Benchmarks and campus data are cited on the <a href="#sources">Sources</a> page.
+    <button class="linkbtn" id="resetBtn">Reset demo data</button></p>
+  </footer>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true">
+      <button class="modal-x" id="modalX" aria-label="Close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
