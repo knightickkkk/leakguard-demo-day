@@ -1,0 +1,128 @@
+{
+  "accessed": "7 Nov 2026",
+  "benchmarks": [
+    {
+      "key": "usShrink",
+      "label": "US retail shrink rate, FY2022",
+      "value": "1.6% of sales",
+      "num": 1.6,
+      "src": "nrf2023",
+      "sourceUrl": "https://nrf.com/media-center/press-releases/shrink-accounted-over-112-billion-industry-losses-2022-according-nrf"
+    },
+    {
+      "key": "usShrinkLoss",
+      "label": "US retail shrink, total loss 2022",
+      "value": "$112.1 billion",
+      "src": "nrf2023",
+      "sourceUrl": "https://nrf.com/media-center/press-releases/shrink-accounted-over-112-billion-industry-losses-2022-according-nrf"
+    },
+    {
+      "key": "theftShare",
+      "label": "Share of shrink from theft (internal + external)",
+      "value": "65%",
+      "num": 65,
+      "src": "nrf2023",
+      "sourceUrl": "https://nrf.com/media-center/press-releases/shrink-accounted-over-112-billion-industry-losses-2022-according-nrf"
+    },
+    {
+      "key": "shoplift93",
+      "label": "Rise in shoplifting incidents, 2023 vs 2019",
+      "value": "+93%",
+      "num": 93,
+      "src": "nrf2024",
+      "sourceUrl": "https://nrf.com/media-center/press-releases/shoplifting-incidents-jump-93-since-pre-covid-according-to-new-industry-study"
+    },
+    {
+      "key": "indiaShrink09",
+      "label": "India retail shrinkage, Jul 2008 - Jun 2009 (highest of 41 countries)",
+      "value": "3.2% of sales",
+      "num": 3.2,
+      "src": "grtbIndia2009",
+      "sourceUrl": "https://www.ifsecglobal.com/india-region/india-tops-retail-shrinkage-rate/"
+    },
+    {
+      "key": "indiaShrink10",
+      "label": "India retail shrinkage, year to Jun 2010",
+      "value": "2.7% of sales (Rs 9,295.9 cr)",
+      "num": 2.7,
+      "src": "grtbIndia2010",
+      "sourceUrl": "https://www.business-standard.com/article/companies/indian-retail-lost-rs-9-295-to-shoplifting-theft-110112400049_1.html"
+    },
+    {
+      "key": "indiaCauses",
+      "label": "India shrink causes (2009): shoplifting / employee theft / admin errors",
+      "value": "45.2% / 23.3% / 22.6%",
+      "src": "grtbIndia2009",
+      "sourceUrl": "https://www.ifsecglobal.com/india-region/india-tops-retail-shrinkage-rate/"
+    },
+    {
+      "key": "globalCauses",
+      "label": "Global shrink causes (2007): customer / employee / admin / vendor",
+      "value": "42.0% / 35.2% / 16.5% / 6.3%",
+      "src": "grtbGlobal2007",
+      "sourceUrl": "https://securitymagazine.com/articles/78786-shrink-costs-the-worlds-retailers-98-6-billion-2"
+    },
+    {
+      "key": "returnRate",
+      "label": "US return rate 2024 (in-store)",
+      "value": "13.21% overall (8.72% in-store)",
+      "num": 13.21,
+      "src": "appriss2024",
+      "sourceUrl": "https://chainstoreage.com/losses-return-fraud-and-abuse-exceed-100-billion"
+    },
+    {
+      "key": "returnFraud",
+      "label": "Share of returns that were fraudulent, 2024",
+      "value": "15.14% ($103 billion)",
+      "num": 15.14,
+      "src": "appriss2024",
+      "sourceUrl": "https://chainstoreage.com/losses-return-fraud-and-abuse-exceed-100-billion"
+    },
+    {
+      "key": "receiptPolicy",
+      "label": "Retailers that require receipts / proof of purchase",
+      "value": "67%",
+      "num": 67,
+      "src": "appriss2024",
+      "sourceUrl": "https://chainstoreage.com/losses-return-fraud-and-abuse-exceed-100-billion"
+    },
+    {
+      "key": "realtimeReturns",
+      "label": "Retailers using real-time return-validation technology",
+      "value": "35%",
+      "num": 35,
+      "src": "appriss2024",
+      "sourceUrl": "https://chainstoreage.com/losses-return-fraud-and-abuse-exceed-100-billion"
+    },
+    {
+      "key": "aishe",
+      "label": "Students enrolled in Indian higher education, 2021-22",
+      "value": "4.33 crore across 1,168 universities and 45,473 colleges",
+      "src": "aishe",
+      "sourceUrl": "https://www.freepressjournal.in/education/aishe-report-survey-records-433-crore-enrolments-in-higher-education-in-india"
+    },
+    {
+      "key": "iitmStudents",
+      "label": "IIT Madras student strength (UG + PG + full-time PhD)",
+      "value": "9,981",
+      "num": 9981,
+      "src": "nirf",
+      "sourceUrl": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0456.pdf"
+    },
+    {
+      "key": "iitmOutlets",
+      "label": "Shops and food outlets listed by the IIT Madras Dean of Students",
+      "value": "53",
+      "num": 53,
+      "src": "dost",
+      "sourceUrl": "https://dost.iitm.ac.in/shops"
+    },
+    {
+      "key": "upi",
+      "label": "UPI transactions in December 2025",
+      "value": "21.63 bn worth Rs 27.97 trn",
+      "src": "upi",
+      "sourceUrl": "https://www.business-standard.com/amp/industry/news/upi-ends-2025-strong-note-record-transactions-december-126010100687_1.html"
+    }
+  ]
+}
