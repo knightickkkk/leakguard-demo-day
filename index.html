@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body data-view="overview">
-  <header class="masthead">
+  <header class="masthead" id="masthead">
+    <div class="progress" id="progress" aria-hidden="true"></div>
     <div class="masthead-inner">
       <a class="brand" href="#overview" aria-label="LeakGuard home">
         <span class="logo" aria-hidden="true"></span>
@@ -37,12 +38,24 @@
   </header>
 
   <section class="titleblock" id="titleblock" aria-label="About this prototype">
-    <p class="kicker">Innovation &amp; Entrepreneurship for Engineers · Demo Day</p>
-    <h1 class="papertitle">LeakGuard: catching revenue leakage in campus shops</h1>
-    <p class="authors">Batch B, Group 41 &nbsp;·&nbsp; Indian Institute of Technology Madras &nbsp;·&nbsp; 15 November 2026</p>
-    <div class="abstract">
-      <p><span class="abstract-label">Abstract.</span>
-      Campus canteens, stationery shops and general stores lose money in three ways: shoplifting, stock that goes missing between deliveries and audits, and refunds that were never earned. Most small owners have no affordable way to see any of the three. LeakGuard ties all three to one source of truth, the bill. Every sale gets a bill ID, every stock count is checked against billed sales, every refund must match a real bill, and a browser-based camera model flags people who leave without one. This working prototype runs on simulated shop data; the campus figures and benchmarks are real and cited.</p>
+    <div class="hero-bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="gridlines"></span></div>
+    <div class="hero-inner" id="heroInner">
+      <p class="kicker hero-in" style="--d:0">Innovation &amp; Entrepreneurship for Engineers · Demo Day</p>
+      <h1 class="papertitle">
+        <span class="ln"><span style="--d:1">LeakGuard: catching revenue</span></span>
+        <span class="ln"><span style="--d:2">leakage in campus shops</span></span>
+      </h1>
+      <p class="authors hero-in" style="--d:3">Batch B, Group 41 &nbsp;·&nbsp; Indian Institute of Technology Madras &nbsp;·&nbsp; 15 November 2026</p>
+      <div class="hero-stats">
+        <div class="hstat hero-in" style="--d:4"><span class="hnum" data-count="39">39</span><span class="hlabel">campus outlets that sell goods or food at IIT Madras</span></div>
+        <div class="hstat hero-in" style="--d:5"><span class="hnum" data-count="42" data-prefix="₹" data-suffix=" lakh">₹42 lakh</span><span class="hlabel">estimated lost to leakage across them every year</span></div>
+        <div class="hstat hero-in" style="--d:6"><span class="hnum" data-count="15.14" data-suffix="%">15.14%</span><span class="hlabel">of US in-store returns were fraudulent in 2024</span></div>
+      </div>
+      <div class="abstract hero-in" style="--d:7">
+        <p><span class="abstract-label">Abstract.</span>
+        Campus canteens, stationery shops and general stores lose money in three ways: shoplifting, stock that goes missing between deliveries and audits, and refunds that were never earned. Most small owners have no affordable way to see any of the three. LeakGuard ties all three to one source of truth, the bill. Every sale gets a bill ID, every stock count is checked against billed sales, every refund must match a real bill, and a browser-based camera model flags people who leave without one. This working prototype runs on simulated shop data; the campus figures and benchmarks are real and cited on the <a href="#sources">Sources</a> page.</p>
+      </div>
+      <a class="scrollcue hero-in" style="--d:8" href="#view" aria-label="Scroll to the dashboard"><span></span></a>
     </div>
   </section>
 
@@ -65,16 +78,118 @@
   <script src="assets/data.js"></script>
   <script src="assets/app.js"></script>
   <script>
-    /* Tells the stylesheet which page is open (section numbers, title block). */
+    /* Page state for the stylesheet, plus all motion: hero entrance, scroll reveals,
+       number counters, chart growth, page transitions and the scroll progress bar.
+       Everything is skipped when the visitor has asked for reduced motion. */
     (function () {
       var views = ["overview", "billing", "inventory", "returns", "camera", "estimator", "campus", "sources"];
-      function mark() {
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var body = document.body, view = document.getElementById("view");
+      if (!reduce) document.documentElement.classList.add("motion");
+
+      function current() {
         var v = (location.hash || "").replace("#", "");
-        document.body.setAttribute("data-view", views.indexOf(v) >= 0 ? v : "overview");
-        window.scrollTo(0, 0);
+        return views.indexOf(v) >= 0 ? v : "overview";
       }
-      window.addEventListener("hashchange", mark);
-      mark();
+
+      /* count a number up from zero, keeping its prefix, suffix, decimals and Indian commas */
+      function countUp(el, target, prefix, suffix, decimals, commas, ms) {
+        if (reduce) return;
+        var start = null;
+        function fmt(n) {
+          return prefix + (commas
+            ? n.toLocaleString("en-IN", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
+            : n.toFixed(decimals)) + suffix;
+        }
+        function step(t) {
+          if (!el.isConnected) return;
+          if (start === null) start = t;
+          var p = Math.min(1, (t - start) / ms), e = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(target * e);
+          if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(target);
+        }
+        el.textContent = fmt(0);
+        requestAnimationFrame(step);
+      }
+      function countText(el, ms) {
+        var m = /^(\D*?)([\d,]+(?:\.\d+)?)(.*)$/.exec(el.textContent.trim());
+        if (!m) return;
+        var num = parseFloat(m[2].replace(/,/g, ""));
+        if (!isFinite(num) || num === 0) return;
+        var dec = (m[2].split(".")[1] || "").length;
+        countUp(el, num, m[1], m[3], dec, m[2].indexOf(",") >= 0 || num >= 1000, ms);
+      }
+
+      /* reveal on scroll */
+      var io = ("IntersectionObserver" in window) ? new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          var el = en.target;
+          io.unobserve(el);
+          el.classList.add("in");
+          el.querySelectorAll(".kpi .value, .bigstat").forEach(function (n) { countText(n, 1100); });
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }) : null;
+
+      function enhance() {
+        if (reduce) return;
+        view.classList.remove("page-in"); void view.offsetWidth; view.classList.add("page-in");
+        var items = view.querySelectorAll(".pagehead, .kpis > .card, .grid > .card, .grid > .stack > .card, main > .card, #auditPanel > .card");
+        var i = 0;
+        items.forEach(function (el) {
+          if (el.classList.contains("pagehead")) { el.classList.add("rv-line"); requestAnimationFrame(function () { el.classList.add("in"); }); return; }
+          el.classList.add("rv");
+          el.style.setProperty("--rd", Math.min(i++, 6) * 70 + "ms");
+          if (io) io.observe(el); else el.classList.add("in");
+        });
+        view.querySelectorAll(".bars .b").forEach(function (b, k) { b.style.setProperty("--bd", k * 35 + "ms"); });
+        view.querySelectorAll("table").forEach(function (t) {
+          Array.prototype.slice.call(t.rows, 1, 16).forEach(function (r, k) { r.classList.add("row-in"); r.style.setProperty("--td", 200 + k * 30 + "ms"); });
+        });
+      }
+
+      function mark(first) {
+        body.setAttribute("data-view", current());
+        if (!first) window.scrollTo(0, 0);
+        enhance();
+      }
+      window.addEventListener("hashchange", function () { mark(false); });
+      mark(true);
+
+      /* hero: staggered entrance, counters and a gentle parallax on scroll */
+      var hero = document.getElementById("titleblock"), inner = document.getElementById("heroInner");
+      if (!reduce) {
+        requestAnimationFrame(function () { hero.classList.add("ready"); });
+        setTimeout(function () {
+          document.querySelectorAll(".hnum[data-count]").forEach(function (n) {
+            var v = parseFloat(n.dataset.count);
+            countUp(n, v, n.dataset.prefix || "", n.dataset.suffix || "", (n.dataset.count.split(".")[1] || "").length, false, 1600);
+          });
+        }, 650);
+      }
+
+      /* scroll progress bar, masthead shadow, hero parallax */
+      var bar = document.getElementById("progress"), mast = document.getElementById("masthead"), ticking = false;
+      function onScroll() {
+        ticking = false;
+        var y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.transform = "scaleX(" + (h > 0 ? Math.min(1, y / h) : 0) + ")";
+        mast.classList.toggle("scrolled", y > 8);
+        if (!reduce && body.getAttribute("data-view") === "overview" && y < hero.offsetHeight + 100) {
+          inner.style.transform = "translateY(" + y * 0.28 + "px)";
+          inner.style.opacity = Math.max(0, 1 - y / (hero.offsetHeight * 0.9));
+        }
+      }
+      window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+      window.addEventListener("resize", onScroll);
+      onScroll();
+
+      /* the scroll cue glides down to the dashboard without changing the page hash */
+      document.querySelector(".scrollcue").addEventListener("click", function (e) {
+        e.preventDefault();
+        var sticky = getComputedStyle(mast).position === "sticky";
+        window.scrollTo({ top: hero.offsetTop + hero.offsetHeight - (sticky ? mast.offsetHeight : 0) + 1, behavior: reduce ? "auto" : "smooth" });
+      });
     })();
   </script>
 </body>
