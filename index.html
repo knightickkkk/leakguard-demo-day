@@ -5,41 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LeakGuard – Campus Retail Leak Monitor</title>
   <meta name="description" content="LeakGuard: one low-cost system for campus shops to catch revenue leakage from shoplifting, stock errors and refund fraud.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f5e57'/%3E%3Cpath d='M16 6c-4 5-7 8.5-7 12a7 7 0 0 0 14 0c0-3.5-3-7-7-12z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23e76f51'/%3E%3Cpath d='M16 6c-4 5-7 8.5-7 12a7 7 0 0 0 14 0c0-3.5-3-7-7-12z' fill='%23ffffff'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/LM-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="logo" aria-hidden="true"></span>
-      <div>
-        <strong>LeakGuard</strong>
-        <small>Campus retail leak monitor · prototype</small>
+<body data-view="overview">
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="brand" href="#overview" aria-label="LeakGuard home">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>LeakGuard</strong>
+          <em>Campus retail leak monitor</em>
+        </span>
+      </a>
+      <div class="shopinfo">
+        <label><span>Shop</span><select id="shopSel"><option>Campus General &amp; Stationery Store (demo)</option></select></label>
+        <label><span>Signed in as</span><select id="staffSel"></select></label>
       </div>
     </div>
-    <div class="shopinfo">
-      <label>Shop <select id="shopSel"><option>Campus General &amp; Stationery Store (demo)</option></select></label>
-      <label>Logged in as <select id="staffSel"></select></label>
-    </div>
+    <nav class="tabs" id="tabs" aria-label="Sections">
+      <a href="#overview">Overview</a>
+      <a href="#billing">Billing</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#returns">Returns</a>
+      <a href="#camera">Camera watch</a>
+      <a href="#estimator">Loss estimator</a>
+      <a href="#campus">Campus data</a>
+      <a href="#sources">Sources</a>
+    </nav>
   </header>
 
-  <nav class="tabs" id="tabs">
-    <a href="#overview">Overview</a>
-    <a href="#billing">Billing</a>
-    <a href="#inventory">Inventory</a>
-    <a href="#returns">Returns</a>
-    <a href="#camera">Camera watch</a>
-    <a href="#estimator">Loss estimator</a>
-    <a href="#campus">Campus data</a>
-    <a href="#sources">Sources</a>
-  </nav>
+  <section class="titleblock" id="titleblock" aria-label="About this prototype">
+    <p class="kicker">Innovation &amp; Entrepreneurship for Engineers · Demo Day</p>
+    <h1 class="papertitle">LeakGuard: catching revenue leakage in campus shops</h1>
+    <p class="authors">Batch B, Group 41 &nbsp;·&nbsp; Indian Institute of Technology Madras &nbsp;·&nbsp; 15 November 2026</p>
+    <div class="abstract">
+      <p><span class="abstract-label">Abstract.</span>
+      Campus canteens, stationery shops and general stores lose money in three ways: shoplifting, stock that goes missing between deliveries and audits, and refunds that were never earned. Most small owners have no affordable way to see any of the three. LeakGuard ties all three to one source of truth, the bill. Every sale gets a bill ID, every stock count is checked against billed sales, every refund must match a real bill, and a browser-based camera model flags people who leave without one. This working prototype runs on simulated shop data; the campus figures and benchmarks are real and cited.</p>
+    </div>
+  </section>
 
   <main id="view"></main>
 
   <footer class="foot">
-    <p>LeakGuard prototype for the Innovation &amp; Entrepreneurship for Engineers Demo Day, IIT Madras, 15 Nov 2026 (Batch B, Group 41).
-    Shop transactions are simulated demo data stored only in your browser. Benchmarks and campus data are cited on the <a href="#sources">Sources</a> page.
-    <button class="linkbtn" id="resetBtn">Reset demo data</button></p>
+    <hr class="footrule">
+    <p>LeakGuard prototype for the <em>Innovation &amp; Entrepreneurship for Engineers</em> Demo Day, IIT Madras, 15 Nov 2026 (Batch B, Group 41).
+    Shop transactions are simulated demo data stored only in your browser. Benchmarks and campus data are cited on the <a href="#sources">Sources</a> page.</p>
+    <p><button class="linkbtn" id="resetBtn">Reset demo data</button></p>
   </footer>
 
   <div class="modal" id="modal" hidden>
@@ -51,5 +64,18 @@
 
   <script src="assets/data.js"></script>
   <script src="assets/app.js"></script>
+  <script>
+    /* Tells the stylesheet which page is open (section numbers, title block). */
+    (function () {
+      var views = ["overview", "billing", "inventory", "returns", "camera", "estimator", "campus", "sources"];
+      function mark() {
+        var v = (location.hash || "").replace("#", "");
+        document.body.setAttribute("data-view", views.indexOf(v) >= 0 ? v : "overview");
+        window.scrollTo(0, 0);
+      }
+      window.addEventListener("hashchange", mark);
+      mark();
+    })();
+  </script>
 </body>
 </html>
