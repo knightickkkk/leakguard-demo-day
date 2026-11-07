@@ -1,0 +1,327 @@
+{
+  "source": "https://dost.iitm.ac.in/shops",
+  "crossCheck": "https://ccw.iitm.ac.in/pages/eateries-and-shops",
+  "accessed": "7 Nov 2026",
+  "count": 53,
+  "inScope": 39,
+  "outlets": [
+    {
+      "name": "Fresh Market",
+      "type": "Grocery",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Andavar Traders",
+      "type": "General store",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Kamala Enterprises",
+      "type": "General store",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "TUCS (Ration)",
+      "type": "Grocery",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Raja Stores",
+      "type": "General store",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Varshini Fancy Wear",
+      "type": "Clothing",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Sri Lakshmi Enterprises",
+      "type": "General store",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Kumar Tailors",
+      "type": "Tailoring",
+      "location": "Shopping Complex",
+      "inScope": false
+    },
+    {
+      "name": "Sarathy Footwear",
+      "type": "Footwear",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Flour Mill",
+      "type": "Milling service",
+      "location": "Shopping Complex",
+      "inScope": false
+    },
+    {
+      "name": "Raja Tea Stall",
+      "type": "Food & beverage",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Photo Shot",
+      "type": "Photo studio",
+      "location": "Shopping Complex",
+      "inScope": false
+    },
+    {
+      "name": "Malabar Hair Dressers",
+      "type": "Salon",
+      "location": "Shopping Complex",
+      "inScope": false
+    },
+    {
+      "name": "7 Star Spa Parlour",
+      "type": "Spa",
+      "location": "Shopping Complex",
+      "inScope": false
+    },
+    {
+      "name": "Automobile Workshop",
+      "type": "Vehicle repair",
+      "location": "Shopping Complex",
+      "inScope": false
+    },
+    {
+      "name": "Adyar Coolbiz",
+      "type": "Food & beverage",
+      "location": "New SFC (near Sharavathi)",
+      "inScope": true
+    },
+    {
+      "name": "Srinivasa Departmental Stores",
+      "type": "General store",
+      "location": "New SFC (near Sharavathi)",
+      "inScope": true
+    },
+    {
+      "name": "Ironing Shop",
+      "type": "Laundry",
+      "location": "New SFC (near Sharavathi)",
+      "inScope": false
+    },
+    {
+      "name": "Premass Srivari Browsing Centre",
+      "type": "Printing / browsing",
+      "location": "New SFC (near Sharavathi)",
+      "inScope": true
+    },
+    {
+      "name": "TI Cycles of India",
+      "type": "Cycle repair",
+      "location": "New SFC (near Sharavathi)",
+      "inScope": false
+    },
+    {
+      "name": "Sri Vari Browsing Centre",
+      "type": "Printing / photocopy",
+      "location": "Narmada Hostel basement",
+      "inScope": true
+    },
+    {
+      "name": "7 Star Beauty Salon",
+      "type": "Salon",
+      "location": "Narmada Hostel basement",
+      "inScope": false
+    },
+    {
+      "name": "Laundry Bus",
+      "type": "Laundry",
+      "location": "Narmada Hostel basement",
+      "inScope": false
+    },
+    {
+      "name": "Sunshine Communications",
+      "type": "Communications",
+      "location": "Narmada Hostel basement",
+      "inScope": false
+    },
+    {
+      "name": "Prime Mart",
+      "type": "Stationery",
+      "location": "Near CCW Office",
+      "inScope": true
+    },
+    {
+      "name": "Speed Buy Cycle",
+      "type": "Cycle repair",
+      "location": "Near Sangam Ground",
+      "inScope": false
+    },
+    {
+      "name": "Sri Krishna Service Centre",
+      "type": "Cycle repair",
+      "location": "Bonn Avenue",
+      "inScope": false
+    },
+    {
+      "name": "Cycle World",
+      "type": "Cycle repair",
+      "location": "Near Tapti Hostel",
+      "inScope": false
+    },
+    {
+      "name": "Cafe Coffee Day",
+      "type": "Cafe",
+      "location": "Near DoMS",
+      "inScope": true
+    },
+    {
+      "name": "Staff Canteen (Vajram Catering)",
+      "type": "Canteen",
+      "location": "FFT ground floor",
+      "inScope": true
+    },
+    {
+      "name": "Usha Cafe",
+      "type": "Cafe / snacks",
+      "location": "NSFC Shop 1",
+      "inScope": true
+    },
+    {
+      "name": "Juice World littlebites",
+      "type": "Juice / snacks",
+      "location": "NSFC Shop 2",
+      "inScope": true
+    },
+    {
+      "name": "Grubhub Food Truck",
+      "type": "Food truck",
+      "location": "Near NSFC, Sabarmati",
+      "inScope": true
+    },
+    {
+      "name": "Rotormans",
+      "type": "Food truck",
+      "location": "Behind TGH",
+      "inScope": true
+    },
+    {
+      "name": "Golden Spoon",
+      "type": "Food truck",
+      "location": "Behind TGH",
+      "inScope": true
+    },
+    {
+      "name": "Zaitoon Restaurant & Grill",
+      "type": "Restaurant",
+      "location": "Quark",
+      "inScope": true
+    },
+    {
+      "name": "Ramu Alias Trivetti",
+      "type": "Tea & snacks",
+      "location": "Shopping Complex",
+      "inScope": true
+    },
+    {
+      "name": "Maaran Snacks",
+      "type": "Snacks",
+      "location": "ICICI Bank Hangout",
+      "inScope": true
+    },
+    {
+      "name": "Cream Stone",
+      "type": "Desserts",
+      "location": "ICICI Bank Hangout",
+      "inScope": true
+    },
+    {
+      "name": "Dollar Cafe",
+      "type": "Cafe",
+      "location": "HDFC Bank Hangout",
+      "inScope": true
+    },
+    {
+      "name": "Magglicious Foods",
+      "type": "Food outlet",
+      "location": "HDFC Bank Hangout",
+      "inScope": true
+    },
+    {
+      "name": "KR Bakers & Tender Coconut",
+      "type": "Bakery / beverages",
+      "location": "Opp. OAT student gate",
+      "inScope": true
+    },
+    {
+      "name": "Sri Bhakya Fast Food",
+      "type": "Fast food",
+      "location": "FFT first floor",
+      "inScope": true
+    },
+    {
+      "name": "Wow Momos",
+      "type": "Fast food",
+      "location": "FFT first floor",
+      "inScope": true
+    },
+    {
+      "name": "RK Foods",
+      "type": "Food outlet",
+      "location": "FFT first floor",
+      "inScope": true
+    },
+    {
+      "name": "Bachelor Restaurant",
+      "type": "Restaurant",
+      "location": "FFT first floor",
+      "inScope": true
+    },
+    {
+      "name": "Sri Bhakya Juice Stall",
+      "type": "Juice",
+      "location": "FFT first floor",
+      "inScope": true
+    },
+    {
+      "name": "Indian Coffee House",
+      "type": "Cafe",
+      "location": "FFT first floor",
+      "inScope": true
+    },
+    {
+      "name": "Waah Hyderabadi",
+      "type": "Restaurant",
+      "location": "Himalaya Food Court",
+      "inScope": true
+    },
+    {
+      "name": "Vineyard",
+      "type": "Restaurant",
+      "location": "Himalaya Food Court",
+      "inScope": true
+    },
+    {
+      "name": "Hotel Ananda",
+      "type": "Restaurant",
+      "location": "Himalaya Food Court",
+      "inScope": true
+    },
+    {
+      "name": "Chaai Waale",
+      "type": "Tea",
+      "location": "Himalaya Food Court",
+      "inScope": true
+    },
+    {
+      "name": "Deli Pizzeria",
+      "type": "Pizza",
+      "location": "Himalaya Food Court",
+      "inScope": true
+    }
+  ]
+}
